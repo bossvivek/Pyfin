@@ -67,8 +67,8 @@ def authentication_page(filename="users.xlsx"):
 
 # Displays stock news
 def fetch_stock_news_finnhub(ticker):
-    """Fetch recent stock-related news using Finnhub."""
-    finnhub_client = finnhub.Client(api_key="ctcvpg1r01qlc0uvnvngctcvpg1r01qlc0uvnvo0")  # Custom API key from Finnhub website.
+    """Fetches recent stock related news articles in the top 5 using Finnhub."""
+    finnhub_client = finnhub.Client(api_key="ctcvpg1r01qlc0uvnvngctcvpg1r01qlc0uvnvo0")  # Custom API key we got from Finnhub website.
     try:
         # Fetch news
         news = finnhub_client.company_news(ticker, _from='2023-01-01', to=datetime.today().strftime('%Y-%m-%d'))
